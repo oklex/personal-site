@@ -1,0 +1,27 @@
+#Nav-section {
+  width: 350px;
+  height: 100vh;
+  border-right: solid 1px #919191 !important;
+  text-align: center;
+  #navigation {
+    margin-top: calc((100vh - 400px) / 2);
+    margin-bottom: auto;
+
+    #logo {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0px !important;
+      text-align: center;
+    }
+    a {
+      transition: 0.2s;
+    }
+    li:hover {
+      letter-spacing: 2px;
+    }
+  }
+}

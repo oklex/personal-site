@@ -1,5 +1,5 @@
 import React from "react"
-import "./Navigation.css"
+import "./Navigation.scss"
 import logo from '../../img/personal-logo.svg'
 import {Link } from "react-router-dom"
 
@@ -7,8 +7,9 @@ import {Link } from "react-router-dom"
 class Navigation extends React.Component<{},{}> {
     render() {
         return (
-            <div>
-                <img src={logo} alt='my-personal-logo'/>
+            <div id='Nav-section'>
+            <div id='navigation'>
+            <Link to='/'> <img id='logo' src={logo} alt='my-personal-logo'/></Link>
                 <ul>
                     <li>
                         <Link to='/'> Home </Link>
@@ -26,6 +27,7 @@ class Navigation extends React.Component<{},{}> {
                         <Link to='/contact'> Contact </Link>
                     </li>
                 </ul>
+            </div>
             </div>
         )
     }

@@ -1,11 +1,21 @@
+$brand-blue: #007ab9;
+
 #app {
+  display: flex;
   #content {
     padding-left: 30px;
+    flex-grow: 3;
+    margin-top: calc((80vh - 90px) / 2) !important;
+    margin-bottom: 0px !important;
   }
 
   .spacer {
     height: 20px;
     width: 100%;
+  }
+
+  .center-content {
+    height: 100%;
   }
 
   .light-font {
@@ -14,14 +24,21 @@
 
   .divider {
     width: 600px;
-    height: 1px;
+    height: 2px;
     border-bottom: solid;
-    border-width: 0.5px;
+    border-width: 1px;
     color: #919191;
   }
 
   .text-wrapper {
     width: 100%;
     max-width: 600px;
+  }
+
+  a {
+    font-size: 18px;
+    color: $brand-blue;
+    text-decoration: none;
+    line-height: 1.5em;
   }
 }
