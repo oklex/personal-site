@@ -12,16 +12,16 @@ class About extends React.Component<{}, {}> {
             </p>
             <br />
             <p>
-              <strong>2013</strong> - My frist wordpress site for a student
-              event I was hosting
+              <strong>2013</strong> - My first wordpress site. Made for an
+              event I was hosting.
             </p>
             <p>
               <strong>2015</strong> - Started a Computer science degree at Simon
-              Fraser University
+              Fraser University.
             </p>
             <p>
               <strong>2019</strong> - Started my first Developer internship at a
-              start-up
+              start-up.
             </p>
           </div>
         </PageWrapper>

@@ -12,7 +12,7 @@ class ExpItemBox extends React.Component<IExpItemBoxProps, {}> {
   displayModal = () => {
     if (this.props.show === true) {
       return (
-        <div>
+        <div className='modal'>
           <button className="btn-back" onClick={() => this.props.closeModal}>
             <span>
               <img src={backIcon} alt="icon-back" />

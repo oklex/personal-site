@@ -13,7 +13,7 @@ interface IExperienceCardProps {
 }
 
 interface IExperienceCardState {
-  modalIsOpen: boolean;
+  showModal: boolean;
 }
 
 class ExperienceCard extends React.Component<
@@ -21,22 +21,23 @@ class ExperienceCard extends React.Component<
   IExperienceCardState
 > {
   state = {
-    modalIsOpen: false
+    showModal: false
   };
 
   openModal = () => {
     this.setState({
-      modalIsOpen: true
+      showModal: true
     });
-    console.log(this.state.modalIsOpen);
+    console.log(this.state.showModal);
   };
 
   closeModal = async () => {
     console.log("closing modal");
+    const oldState = this.state.showModal
     await this.setState({
-      modalIsOpen: false
+      showModal: !oldState
     });
-    console.log(this.state.modalIsOpen);
+    console.log(this.state.showModal);
   };
 
   showMetaInfo = () => {
@@ -49,7 +50,7 @@ class ExperienceCard extends React.Component<
   showItemBox = () => {
     return (
       <ExpItemBox
-        show={this.state.modalIsOpen}
+        show={this.state.showModal}
         closeModal={this.closeModal}
         titleSection={
           <div>
@@ -64,13 +65,25 @@ class ExperienceCard extends React.Component<
     );
   };
 
+  showModal = () => {
+    if (this.state.showModal) {
+      return <button onClick={() => {
+        this.setState({
+          showModal: false
+        })
+      }}> close modal </button>
+    } else {
+      return null
+    }
+  }
+
   render() {
-    console.log(this.state.modalIsOpen);
+    console.log(this.state.showModal);
     return (
       <div className="exp-card" onClick={() => this.openModal()}>
         <div className="flex-between">
           <h3>{this.props.dateDetails}</h3>
-          <img src={linkIcon} alt="new-link-icon" />
+          {/* <img src={linkIcon} alt="new-link-icon" /> */}
         </div>
         <h2>{this.props.jobTitle}</h2>
         {this.showMetaInfo()}
