@@ -1,0 +1,60 @@
+import React from "react"
+import "./App.css"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import Navigation from './components/Navigation/Navigation'
+import Home from './containers/Home/Home'
+import About from './containers/About/About'
+import Skills from './containers/Skills/Skills'
+import Experience from './containers/Experience/Experience'
+import Contact from './containers/Contact/Contact'
+
+class App extends React.Component<{}, {}> {
+  loadHome = () => {
+    return (
+      <Home/>
+    )
+  };
+
+  loadAbout = () => {
+    return (
+      <About/>
+    )
+  };
+
+  loadSkills = () => {
+    return (
+      <Skills/>
+    )
+  };
+
+  loadExperience = () => {
+    return (
+      <Experience/>
+    )
+  };
+
+  loadContact = () => {
+    return (
+      <Contact/>
+    )
+  };
+
+  render() {
+    return (
+      <Router>
+        <div id="app">
+          <Navigation/>
+          <div id="content">
+            <Route exact path="/" component={this.loadHome} />
+            <Route exact path="/about" component={this.loadAbout} />
+            <Route exact path="/skills" component={this.loadSkills} />
+            <Route exact path="/experience" component={this.loadExperience} />
+            <Route exact path="/contact" component={this.loadContact} />
+          </div>
+        </div>
+      </Router>
+    );
+  }
+}
+
+export default App;
