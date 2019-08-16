@@ -1,3 +1,6 @@
+Hosted through Netlify:
+https://romantic-borg-2dc9e4.netlify.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
