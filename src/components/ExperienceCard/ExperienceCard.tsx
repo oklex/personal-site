@@ -1,4 +1,5 @@
 import React from 'react'
+import './ExperienceCard.scss'
 
 interface IExperienceCardProps {
     id?: number

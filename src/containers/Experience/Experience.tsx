@@ -6,7 +6,8 @@ class Experience extends React.Component<{},{}> {
     render() {
         return (
           <PageWrapper subtitle="something" title="Experience">
-            <div><p>child here</p>
+            <div>
+              <div className='spacer'/>
             <ExperienceCard dateDetails='May 2019' jobTitle='Front-end developer+' jobType='Full time' CompanyName='RV echo'/>
             <ExperienceCard dateDetails='Sep 2018' jobTitle='Hackathon project'/>
                 </div>

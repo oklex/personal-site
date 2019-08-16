@@ -1,4 +1,5 @@
 import React from "react";
+import './PageWrapper.scss'
 
 interface IPageWrapperProps {
   subtitle?: string;

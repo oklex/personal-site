@@ -5,16 +5,20 @@ class Skills extends React.Component<{},{}> {
     render() {
         return (
             <div>
-              <PageWrapper subtitle="Front-end skills" title="About">
+              <PageWrapper subtitle="Front-end skills" title="REACT, sass, ts">
                 <p>My first area of expertise is in front-end development</p>
+                <div className='spacer'/>
+              <div className='divider'/>
               </PageWrapper>
-      
-              <br />
-              <PageWrapper subtitle="Back-end skills" title="About">
+                <div className='spacer'/>
+              <PageWrapper subtitle="Back-end skills" title="Node js, express, knex">
                 <p>I'm actively learning</p>
+                <div className='spacer'/>
+              <div className='divider'/>
               </PageWrapper>
       
-              <br />
+              
+              <div className='spacer'/>
               <PageWrapper subtitle="Other skills" title="">
                 <div>
                   <p>Object Oriented Design</p>
