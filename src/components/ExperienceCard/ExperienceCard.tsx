@@ -3,7 +3,7 @@ import React from 'react'
 interface IExperienceCardProps {
     id?: number
     dateDetails: string
-    expTitle: string
+    jobTitle: string
     jobType?: string
     CompanyName?: string
 }
@@ -24,7 +24,7 @@ class ExperienceCard extends React.Component<IExperienceCardProps,{}> {
         return (
             <div className='exp-card' onClick={() => this.showLightBox()}>
                 <h3>{this.props.dateDetails}</h3>
-                <h1>{this.props.expTitle}</h1>
+                <h1>{this.props.jobTitle}</h1>
                 {this.showMetaInfo()}
             </div>
         )
