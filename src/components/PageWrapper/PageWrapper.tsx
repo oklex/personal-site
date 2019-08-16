@@ -26,7 +26,7 @@ class PageWrapper extends React.Component<IPageWrapperProps, {}> {
 
   render() {
     return (
-      <div>
+      <div className='page'>
         {this.showSubtitle()}
         {this.showTitle()}
         {this.showContent()}

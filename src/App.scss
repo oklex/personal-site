@@ -5,8 +5,11 @@ $brand-blue: #007ab9;
   #content {
     padding-left: 30px;
     flex-grow: 3;
-    margin-top: calc((80vh - 90px) / 2) !important;
-    margin-bottom: 0px !important;
+    margin-top: calc(100vh / 3);
+  }
+
+  #nav-section {
+  border-right: solid 1px #919191 !important;
   }
 
   .spacer {
@@ -14,9 +17,10 @@ $brand-blue: #007ab9;
     width: 100%;
   }
 
-  .center-content {
-    height: 100%;
-  }
+  // .center-title {
+  //   margin-top: calc((80vh - 90px) / 2) !important;
+  //   margin-bottom: 0px !important;
+  // }
 
   .light-font {
     color: grey !important;
@@ -32,7 +36,8 @@ $brand-blue: #007ab9;
 
   .text-wrapper {
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
+    padding-right: 15px;
   }
 
   a {

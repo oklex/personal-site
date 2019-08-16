@@ -13,8 +13,8 @@ class ExperienceCard extends React.Component<IExperienceCardProps,{}> {
     showMetaInfo = () => {
         var metaString = ''
         if (this.props.jobType) metaString = this.props.jobType
-        if (this.props.CompanyName) metaString += this.props.CompanyName
-        return <h4>{metaString}</h4>
+        if (this.props.CompanyName) metaString += ' - ' + this.props.CompanyName
+        return <h4 className='blueTag'>{metaString}</h4>
     }
 
     showLightBox = () => {
@@ -25,7 +25,7 @@ class ExperienceCard extends React.Component<IExperienceCardProps,{}> {
         return (
             <div className='exp-card' onClick={() => this.showLightBox()}>
                 <h3>{this.props.dateDetails}</h3>
-                <h1>{this.props.jobTitle}</h1>
+                <h2>{this.props.jobTitle}</h2>
                 {this.showMetaInfo()}
             </div>
         )

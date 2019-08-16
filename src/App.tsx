@@ -1,6 +1,7 @@
 import React from "react"
 import "./App.scss"
 import { BrowserRouter as Router, Route } from "react-router-dom"
+// @ts-ignore
 import Navigation from './components/Navigation/Navigation'
 import Home from './containers/Home/Home'
 import About from './containers/About/About'
@@ -42,9 +43,10 @@ class App extends React.Component<{}, {}> {
   render() {
     return (
       <Router>
-        <div id="app">
-          <Navigation/>
-          <div id="content">
+        <div id="app" className='row'>
+          <div id='nav-section' className='col-sm-1'><Navigation/>
+            </div>
+          <div id="content" className='col-md-11'>
             <Route exact path="/" component={this.loadHome} />
             <Route exact path="/about" component={this.loadAbout} />
             <Route exact path="/skills" component={this.loadSkills} />
