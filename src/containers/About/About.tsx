@@ -7,8 +7,8 @@ class About extends React.Component<{}, {}> {
         <PageWrapper subtitle="About me" title="I love building things">
           <div>
             <p>
-              Everything started with a passion for creating from imagination.
-              Full-stack development is a tool to bring my ideas into reality.{" "}
+              Everything started with a passion for imagination. <br/>
+              I believe full-stack development is a tool to bring ideas into reality.
             </p>
             <br />
             <p>

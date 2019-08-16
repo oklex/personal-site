@@ -3,13 +3,14 @@ $brand-blue: #007ab9;
 #app {
   display: flex;
   #content {
-    padding-left: 30px;
+    padding-left: 50px;
     flex-grow: 3;
-    margin-top: calc(100vh / 3);
+    margin-left: 300px;
+    margin-top: calc(100vh / 12);
   }
 
-  #nav-section {
-  border-right: solid 1px #919191 !important;
+  #Nav-section {
+    border-right: solid 1px #919191 !important;
   }
 
   .spacer {

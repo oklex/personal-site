@@ -1,11 +1,11 @@
 #Nav-section {
-    position: sticky;
+position: fixed;
   width: 300px;
   height: 100vh;
   overflow:hidden;
   text-align: center;
   #navigation {
-    margin-top: calc(100vh / 3);
+    margin-top: calc(100vh / 12);
     margin-bottom: auto;
 
     #logo {

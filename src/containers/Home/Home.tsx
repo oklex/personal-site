@@ -12,9 +12,9 @@ class Home extends React.Component<{}, {}> {
               If you would like to see my current projects or are interested in
               starting a project together, please get in touch.
             </p>
-            <p className="light-font">alexkim.347@gmail.com</p>
+            <p className="light-font"><a href='mailto:alexkim.347@gmail.com'>alexkim.347@gmail.com</a></p>
             <p>Connect with me elsewhere</p>
-            <p className="light-font">LinkedIn - Github</p>
+            <p className="light-font"><a href='https://www.linkedin.com/in/akim-97/'>LinkedIn</a> - <a href='https://github.com/oklex'>Github</a></p>
           </div>
         </PageWrapper>
     );

@@ -8,6 +8,7 @@ interface IPageWrapperProps {
 }
 
 class PageWrapper extends React.Component<IPageWrapperProps, {}> {
+
   showSubtitle = () => {
     if (this.props.subtitle) {
       return <h3>{this.props.subtitle}</h3>;
