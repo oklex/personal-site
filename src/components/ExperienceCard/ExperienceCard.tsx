@@ -24,16 +24,8 @@ class ExperienceCard extends React.Component<
     showModal: false
   };
 
-  openModal = () => {
-    this.setState({
-      showModal: true
-    });
-    console.log(this.state.showModal);
-  };
-
-  closeModal = async () => {
-    console.log("closing modal");
-    const oldState = this.state.showModal
+  toggleModal = async () => {
+    const oldState = this.state.showModal;
     await this.setState({
       showModal: !oldState
     });
@@ -51,7 +43,7 @@ class ExperienceCard extends React.Component<
     return (
       <ExpItemBox
         show={this.state.showModal}
-        closeModal={this.closeModal}
+        closeModal={this.toggleModal}
         titleSection={
           <div>
             <h3>{this.props.dateDetails}</h3>
@@ -65,25 +57,26 @@ class ExperienceCard extends React.Component<
     );
   };
 
-  showModal = () => {
+  showModalBox = () => {
     if (this.state.showModal) {
-      return <button onClick={() => {
-        this.setState({
-          showModal: false
-        })
-      }}> close modal </button>
+      return (
+        <div>
+          <p>show</p>
+        </div>
+      );
     } else {
-      return null
+      return <div />;
     }
-  }
+  };
 
   render() {
     console.log(this.state.showModal);
     return (
-      <div className="exp-card" onClick={() => this.openModal()}>
+      <div className="exp-card" onClick={() => this.toggleModal()}>
+        {this.showModalBox()}
         <div className="flex-between">
           <h3>{this.props.dateDetails}</h3>
-          {/* <img src={linkIcon} alt="new-link-icon" /> */}
+          <img src={linkIcon} alt="new-link-icon" />
         </div>
         <h2>{this.props.jobTitle}</h2>
         {this.showMetaInfo()}
