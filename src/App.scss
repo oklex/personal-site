@@ -48,3 +48,13 @@ $brand-blue: #007ab9;
     line-height: 1.5em;
   }
 }
+
+.modal {
+  float: right;
+  position: fixed;
+  height: auto;
+  min-height: 50%;
+  width: 70%;
+  border: blue solid 3px;
+  background-color: white;
+}

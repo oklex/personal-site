@@ -24,7 +24,7 @@ class Experience extends React.Component<{}, {}> {
 
   showModal = () => {
     if (this.state.show) {
-      return <div><button onClick={() => this.setState({ show: false })}/></div>
+      return <div className='modal'><button onClick={() => this.setState({ show: false })}/></div>
     } else {
       return <div/>
     }

@@ -17,24 +17,20 @@ interface IExperienceCardProps extends IExperienceCardDetails {
 }
 
 interface IExperienceCardState {
-  showModal: boolean;
 }
 
 class ExperienceCard extends React.Component<
   IExperienceCardProps,
   IExperienceCardState
 > {
-  state = {
-    showModal: false
-  };
 
-  toggleModal = async () => {
-    const oldState = this.state.showModal;
-    await this.setState({
-      showModal: !oldState
-    });
-    console.log(this.state.showModal);
-  };
+  // toggleModal = async () => {
+  //   const oldState = this.state.showModal;
+  //   await this.setState({
+  //     showModal: !oldState
+  //   });
+  //   console.log(this.state.showModal);
+  // };
 
   showMetaInfo = () => {
     var metaString = "";
@@ -43,26 +39,26 @@ class ExperienceCard extends React.Component<
     return <h4 className="blueTag">{metaString}</h4>;
   };
 
-  showItemBox = () => {
-    return (
-      <ExpItemBox
-        show={this.state.showModal}
-        closeModal={this.toggleModal}
-        titleSection={
-          <div>
-            <h3>{this.props.dateDetails}</h3>
-            <h2>{this.props.jobTitle}</h2>
-            {this.showMetaInfo()}
-          </div>
-        }
-      >
-        {this.props.jobDetails}
-      </ExpItemBox>
-    );
-  };
+  // showItemBox = () => {
+  //   return (
+  //     <ExpItemBox
+  //       show={this.state.showModal}
+  //       closeModal={this.toggleModal}
+  //       titleSection={
+  //         <div>
+  //           <h3>{this.props.dateDetails}</h3>
+  //           <h2>{this.props.jobTitle}</h2>
+  //           {this.showMetaInfo()}
+  //         </div>
+  //       }
+  //     >
+  //       {this.props.jobDetails}
+  //     </ExpItemBox>
+  //   );
+  // };
 
-  showModalBox = () => {
-    if (this.state.showModal) {
+  requestModal = () => {
+    console.log('requesting modal')
       const modalProps:IExperienceCardDetails = {
         dateDetails: this.props.dateDetails,
         jobTitle: this.props.jobTitle,
@@ -70,14 +66,11 @@ class ExperienceCard extends React.Component<
         jobDetails: this.props.jobDetails,
       }
       this.props.callbackModal(modalProps)
-    }
   };
 
   render() {
-    console.log(this.state.showModal);
     return (
-      <div className="exp-card" onClick={() => this.toggleModal()}>
-        {this.showModalBox()}
+      <div className="exp-card" onClick={() => this.requestModal()}>
         <div className="flex-between">
           <h3>{this.props.dateDetails}</h3>
           <img src={linkIcon} alt="new-link-icon" />
