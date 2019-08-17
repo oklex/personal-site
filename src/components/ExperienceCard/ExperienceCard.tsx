@@ -3,13 +3,17 @@ import "./ExperienceCard.scss";
 import linkIcon from "../../img/new-link.svg";
 import ExpItemBox from "./ExpItemBox";
 
-interface IExperienceCardProps {
-  id?: number;
+export interface IExperienceCardDetails {
+  id?: number | null; // only for future use
   dateDetails: string;
   jobTitle: string;
   jobType?: string;
   CompanyName?: string;
-  JobDetails: JSX.Element;
+  jobDetails: JSX.Element;
+}
+
+interface IExperienceCardProps extends IExperienceCardDetails {
+  callbackModal: (content: IExperienceCardDetails) => void
 }
 
 interface IExperienceCardState {
@@ -52,13 +56,20 @@ class ExperienceCard extends React.Component<
           </div>
         }
       >
-        {this.props.JobDetails}
+        {this.props.jobDetails}
       </ExpItemBox>
     );
   };
 
   showModalBox = () => {
     if (this.state.showModal) {
+      const modalProps:IExperienceCardDetails = {
+        dateDetails: this.props.dateDetails,
+        jobTitle: this.props.jobTitle,
+        jobType: this.props.jobType,
+        jobDetails: this.props.jobDetails,
+      }
+      this.props.callbackModal(modalProps)
       return (
         <div>
           <p>show</p>
