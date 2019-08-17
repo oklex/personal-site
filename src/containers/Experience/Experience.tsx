@@ -1,16 +1,39 @@
 import React from "react";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
-import {IExperienceCardDetails} from '../../components/ExperienceCard/ExperienceCard'
+import { IExperienceCardDetails } from "../../components/ExperienceCard/ExperienceCard";
+import DetailsModal from "../../components/DetailsModal/DetailsModal";
+
+interface IExperienceState extends IExperienceCardDetails {
+  show: boolean;
+}
 
 class Experience extends React.Component<{}, {}> {
-  getModalInfo = (details:IExperienceCardDetails) => {
-    console.log(details)
+  state = {
+    show: false
+  };
+
+  getModalInfo = (details: IExperienceCardDetails) => {
+    console.log(details);
+    if (!this.state.show) {
+      this.setState({
+        show: true
+      });
+    }
+  };
+
+  showModal = () => {
+    if (this.state.show) {
+      return <div><button onClick={() => this.setState({ show: false })}/></div>
+    } else {
+      return <div/>
+    }
   }
 
   render() {
     return (
-      <div>
+      <div id='Experience'>
+        {this.showModal()}
         <PageWrapper subtitle="Experience" title="Technical Experience">
           <div>
             <div className="spacer" />

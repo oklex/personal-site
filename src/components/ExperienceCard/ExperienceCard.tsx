@@ -70,13 +70,6 @@ class ExperienceCard extends React.Component<
         jobDetails: this.props.jobDetails,
       }
       this.props.callbackModal(modalProps)
-      return (
-        <div>
-          <p>show</p>
-        </div>
-      );
-    } else {
-      return <div />;
     }
   };
 
