@@ -2,7 +2,6 @@ $brand-blue: #007ab9;
 
 #app {
   display: flex;
-  overflow-x: scroll;
   #content {
     margin-top: calc(100vh / 12);
     max-width: 720px;
