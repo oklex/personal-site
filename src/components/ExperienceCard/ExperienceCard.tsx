@@ -1,7 +1,6 @@
 import React from "react";
 import "./ExperienceCard.scss";
 import linkIcon from "../../img/new-link.svg";
-import ExpItemBox from "./ExpItemBox";
 
 export interface IExperienceCardDetails {
   id?: number | null; // only for future use
