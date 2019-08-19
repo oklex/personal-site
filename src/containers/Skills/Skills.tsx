@@ -4,7 +4,7 @@ import PageWrapper from "../../components/PageWrapper/PageWrapper";
 class Skills extends React.Component<{}, {}> {
   render() {
     return (
-      <div>
+      <div className='top-offset'>
         <PageWrapper subtitle="Front-end skills" title="REACT, sass, ts">
           <p>My first area of expertise is in front-end development</p>
           <div className="spacer" />

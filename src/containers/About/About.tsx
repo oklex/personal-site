@@ -4,6 +4,7 @@ import PageWrapper from "../../components/PageWrapper/PageWrapper";
 class About extends React.Component<{}, {}> {
   render() {
     return (
+      <div className=' top-offset '>
         <PageWrapper subtitle="About me" title="I love building things">
           <div>
             <p>
@@ -25,6 +26,7 @@ class About extends React.Component<{}, {}> {
             </p>
           </div>
         </PageWrapper>
+        </div>
     );
   }
 }

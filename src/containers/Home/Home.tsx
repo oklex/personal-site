@@ -1,10 +1,10 @@
 import React from "react";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
-import "./Home.scss";
 
 class Home extends React.Component<{}, {}> {
   render() {
     return (
+      <div className=' top-offset'>
         <PageWrapper subtitle="Alexander Kim" title="Junior full-stack dev.">
           <div className="text-wrapper">
             <div className="spacer" />
@@ -17,6 +17,7 @@ class Home extends React.Component<{}, {}> {
             <p className="light-font"><a href='https://www.linkedin.com/in/akim-97/'>LinkedIn</a> - <a href='https://github.com/oklex'>Github</a></p>
           </div>
         </PageWrapper>
+        </div>
     );
   }
 }

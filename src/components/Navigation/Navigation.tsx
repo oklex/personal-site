@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 class Navigation extends React.Component<{}, {}> {
   render() {
     return (
-      <div id="Nav-section">
         <div id="navigation">
           <Link to="/">
             <img id="logo" src={logo} alt="my-personal-logo" />
@@ -29,7 +28,6 @@ class Navigation extends React.Component<{}, {}> {
             </li>
           </ul>
         </div>
-      </div>
     );
   }
 }
